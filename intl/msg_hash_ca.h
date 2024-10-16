@@ -1386,6 +1386,10 @@ MSG_HASH(
    "Controlador d'àudio que es farà servir."
    )
 #ifdef HAVE_MICROPHONE
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MICROPHONE_DRIVER,
+   "Micròfon"
+   )
 #endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_AUDIO_RESAMPLER_DRIVER,
@@ -1882,16 +1886,8 @@ MSG_HASH(
    "Escalat d'enter"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER,
-   "Escala el vídeo només amb increments enters. La mida base depèn de la geometria informada pel sistema i la relació d'aspecte. Si no s'estableix 'Força la relació d'aspecte' X/Y seran enters escalats independentment."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Sobre-escalat de l'escalat d'enter"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Força l'arrodoniment de l'escalat d'enter fins el següent nombre enter enlloc d'arrodonir cap a baix."
+   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_SCALING_SMART,
+   "Intel·ligent"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_ASPECT_RATIO_INDEX,
@@ -2083,6 +2079,10 @@ MSG_HASH(
    "Canvia les opcions de sortida de l'àudio."
    )
 #ifdef HAVE_MICROPHONE
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MICROPHONE_SETTINGS,
+   "Micròfon"
+   )
 #endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_AUDIO_RESAMPLER_SETTINGS,
@@ -2242,6 +2242,10 @@ MSG_HASH(
 
 #ifdef HAVE_MICROPHONE
 /* Settings > Audio > Input */
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MICROPHONE_ENABLE,
+   "Micròfon"
+   )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MICROPHONE_DEVICE,
    "Dispositiu"
@@ -2568,6 +2572,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_INPUT_BIND_HOLD,
    "La quantitat de segons que se sosté una entrada per a assignar-la."
+   )
+MSG_HASH(
+   MSG_INPUT_BIND_TIMEOUT,
+   "Temps d'espera superat"
    )
 MSG_HASH(
    MSG_INPUT_BIND_HOLD,
@@ -3060,6 +3068,10 @@ MSG_HASH(
    "Índex del dispositiu"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_DEVICE_RESERVATION_RESERVED,
+   "Reservat"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_INPUT_REMAP_PORT,
    "Port assignat"
    )
@@ -3231,14 +3243,6 @@ MSG_HASH(
    "El nucli actual és imcompatible amb la reducció predictiva de latència per mancar de suport de desats ràpids determinístics."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_ENABLED,
-   "Reducció predictiva de latència"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_ENABLED,
-   "Executa la lògica del nucli un o més fotogrames de bestreta i després carrega un desat ràpid per minvar la latència d'entrada percebuda."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_FRAMES,
    "Nombre de fotogrames a la reducció predictiva"
    )
@@ -3246,14 +3250,8 @@ MSG_HASH(
    MENU_ENUM_SUBLABEL_RUN_AHEAD_FRAMES,
    "Determina el nombre de fotogrames a executar de bestreta. Poden haver fluctuacions de senyal si el nombre de fotogrames endarrerits supera al valor intern del joc."
    )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Usa una segona instància per a la reducció predictiva"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Usa una segona instància del nucli RetroArch per portar a terme la reducció predictiva de latència. Capguarda els problemes d'àudio ocasionats al carregar desats ràpids."
-   )
+#if !(defined(HAVE_DYNAMIC) || defined(HAVE_DYLIB))
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_HIDE_WARNINGS,
    "Amagar avisos de la reducció predictiva"
@@ -3445,6 +3443,10 @@ MSG_HASH(
    "Estableix el nivell de registre pels nuclis. Si un nivell de registre emès per un nucli es troba per sota d’aquest valor, s’ignorarà."
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_LOG_VERBOSITY_INFO,
+   "1 (Informació)"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_LOG_TO_FILE,
    "Desa el registre en un fitxer"
    )
@@ -3611,6 +3613,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_INPUT_OVERLAY_SHOW_INPUTS,
    "Mostra a la superposició en pantalla les entrades registrades. 'Tocat' destaca els elements de la supersposició que es polsen/cliquen. 'Físic (controlador)' destaca l'entrada real passada als nuclis, habitualment des d'un teclat/controlador connectat."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_INPUT_OVERLAY_SHOW_INPUTS_TOUCHED,
+   "Tàctil"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_INPUT_OVERLAY_SHOW_INPUTS_PORT,
@@ -3858,6 +3864,10 @@ MSG_HASH(
    MENU_ENUM_SUBLABEL_MENU_SETTINGS,
    "Canvia les opcions de l'aparença del menú."
    )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_APPICON_SETTINGS,
+   "Icona de l'Aplicació"
+   )
 #ifdef _3DS
 #endif
 MSG_HASH(
@@ -3867,6 +3877,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_SUBLABEL_SHOW_ADVANCED_SETTINGS,
    "Mostra les opcions avançades per a usuaris experts."
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MENU_ENABLE_KIOSK_MODE,
+   "Mode Quiosc"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MENU_SAVESTATE_RESUME,
@@ -4468,6 +4482,10 @@ MSG_HASH(
 /* Settings > User Interface > Appearance */
 
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MENU_FRAMEBUFFER_OPACITY,
+   "Opacitat"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MENU_REMEMBER_SELECTION,
    "Recordar selecció al canviar entre seccions"
    )
@@ -4692,6 +4710,10 @@ MSG_HASH(
 
 /* Settings > Achievements > Visibility */
 
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_CHEEVOS_VISIBILITY_SETTINGS,
+   "Visibilitat"
+   )
 
 /* Settings > Network */
 
@@ -4758,6 +4780,10 @@ MSG_HASH(
    "Nucli:"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_PLAYLIST_SUBLABEL_RUNTIME,
+   "Durada:"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PLAYLIST_SUBLABEL_LAST_PLAYED,
    "Darrera partida:"
    )
@@ -4772,6 +4798,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_TIME_UNIT_MINUTES_SINGLE,
    "minut"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_TIME_UNIT_MINUTES_PLURAL,
+   "minuts"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_TIME_UNIT_HOURS_SINGLE,
@@ -4855,6 +4885,14 @@ MSG_HASH(
 
 /* Settings > User */
 
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_PRIVACY_SETTINGS,
+   "Privacitat"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_ACCOUNTS_LIST,
+   "Compte"
+   )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NETPLAY_NICKNAME,
    "Nom d’usuari"
@@ -5730,6 +5768,10 @@ MSG_HASH(
    "Índex"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_CHEAT_STATE,
+   "Habilitat"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEAT_DESC,
    "Descripció"
    )
@@ -5943,8 +5985,24 @@ MSG_HASH(
    "90º"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_ROTATION_180_DEG,
+   "180º"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_ROTATION_270_DEG,
+   "270º"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_ORIENTATION_VERTICAL,
    "90º"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_ORIENTATION_FLIPPED,
+   "180º"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_VIDEO_ORIENTATION_FLIPPED_ROTATED,
+   "270º"
    )
 
 /* Settings Options */
@@ -5966,6 +6024,10 @@ MSG_HASH(
    "Màxim"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NETPLAY_SHARE_ANALOG_AVERAGE,
+   "Mitjana"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NETPLAY_SHARE_NONE,
    "Cap"
    )
@@ -5980,6 +6042,18 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PLAYLIST_INLINE_CORE_DISPLAY_NEVER,
    "Mai"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_PLAYLIST_RUNTIME_PER_CORE,
+   "Per nucli"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_SYSTEM_INFO_POWER_SOURCE_CHARGED,
+   "Carregada"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_SYSTEM_INFO_POWER_SOURCE_CHARGING,
+   "Carregant"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_DIRECTORY_CONTENT,
@@ -6070,12 +6144,20 @@ MSG_HASH(
    "<Desactivat>"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_CHEAT_HANDLER_TYPE_EMU,
+   "Emulador"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PLAYLIST_MANAGER_SORT_MODE_OFF,
    "Cap"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_THUMBNAIL_MODE_BOXARTS,
    "Caràtula"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_THUMBNAIL_MODE_SCREENSHOTS,
+   "Captura de pantall"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_SCROLL_FAST,
@@ -6102,6 +6184,14 @@ MSG_HASH(
    "Fals"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_ENABLED,
+   "Habilitat"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_DISABLED,
+   "Deshabilitat"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_NOT_AVAILABLE,
    "N/D"
    )
@@ -6110,12 +6200,28 @@ MSG_HASH(
    "Bloquejat"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_CHEEVOS_UNLOCKED_ENTRY,
+   "Desbloquejat"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CHEEVOS_UNLOCKED_ENTRY_HARDCORE,
    "Expert"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_CHEEVOS_UNOFFICIAL_ENTRY,
+   "No oficial"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_DONT_CARE,
+   "Per defecte"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_LINEAR,
    "Lineal"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_NEAREST,
+   "Més proper"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MAIN,
@@ -6739,6 +6845,10 @@ MSG_HASH(
    "No"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_MATERIALUI_THUMBNAIL_VIEW_LANDSCAPE_DESKTOP,
+   "Escriptori"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MATERIALUI_LANDSCAPE_LAYOUT_OPTIMIZATION_DISABLED,
    "No"
    )
@@ -6802,6 +6912,10 @@ MSG_HASH(
    "Nom"
    )
 MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QT_CORE_VERSION,
+   "Versió"
+   )
+MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_TAB_PLAYLISTS,
    "Llistes de reproducció"
    )
@@ -6832,6 +6946,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_INFORMATION,
    "Informació"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QT_WARNING,
+   "Advertència"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_LOG,
@@ -6868,6 +6986,14 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_MENU_SEARCH_CLEAR,
    "Netejar"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QT_PROGRESS,
+   "Progrés:"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_QT_QUESTION,
+   "Qüestió"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_QT_PLAYLIST_ENTRY_NAME,
@@ -7067,6 +7193,10 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_LOAD_CONTENT_HISTORY,
    "Historial"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_BT_CONNECTED,
+   "Connectat"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_ONLINE,
@@ -7507,6 +7637,10 @@ MSG_HASH(
 MSG_HASH(
    MSG_NETPLAY_STATUS_PLAYING,
    "Jugant"
+   )
+MSG_HASH(
+   MSG_NETPLAY_CLIENT_DEVICES,
+   "Dispositius"
    )
 
 MSG_HASH(
@@ -7990,6 +8124,10 @@ MSG_HASH(
    "La suma de verificació inflada no coincideix amb el CRC32."
    )
 MSG_HASH(
+   MSG_INTERFACE,
+   "Interfície"
+   )
+MSG_HASH(
    MSG_IN_BYTES,
    "en bytes"
    )
@@ -8000,6 +8138,10 @@ MSG_HASH(
 MSG_HASH(
    MSG_IN_GIGABYTES,
    "en gigabytes"
+   )
+MSG_HASH(
+   MSG_LOADING,
+   "Carregant"
    )
 MSG_HASH(
    MSG_MEMORY,
@@ -8018,8 +8160,16 @@ MSG_HASH(
    "No està disponible el rebobinat perquè aquest nucli no té suport d'estat desats serialitzats."
    )
 MSG_HASH(
+   MSG_SCANNING,
+   "Escanejant"
+   )
+MSG_HASH(
    MSG_BLOCKING_SRAM_OVERWRITE,
    "S’està blocant la sobreescriptura de SRAM"
+   )
+MSG_HASH(
+   MSG_LEADERBOARD_RANK,
+   "Rang: %d" /* Rank: [leaderboard rank] */
    )
 MSG_HASH(
    MSG_PRESS_AGAIN_TO_QUIT,
@@ -8178,6 +8328,14 @@ MSG_HASH(
    "Més baix"
    )
 MSG_HASH(
+   MSG_RESAMPLER_QUALITY_HIGHER,
+   "Més alt"
+   )
+MSG_HASH(
+   MSG_RESAMPLER_QUALITY_HIGHEST,
+   "Més alt"
+   )
+MSG_HASH(
    MSG_CORE_INSTALLATION_FAILED,
    "Ha fallat la instal·lació del nucli: "
    )
@@ -8192,6 +8350,10 @@ MSG_HASH(
 
 /* Lakka */
 
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_REBOOT,
+   "Reiniciar"
+   )
 
 /* Environment Specific Settings */
 
@@ -8202,6 +8364,14 @@ MSG_HASH(
 MSG_HASH(
    MSG_SCREEN_RESOLUTION_FORMAT_DESC,
    "%u×%u - %s"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_SHUTDOWN,
+   "Apagar"
+   )
+MSG_HASH(
+   MENU_ENUM_LABEL_VALUE_FILE_BROWSER_OPEN_PICKER,
+   "Obrir..."
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_WIFI_SETTINGS,
@@ -8459,6 +8629,10 @@ MSG_HASH(
 #else
 #endif
 #ifdef _3DS
+MSG_HASH(
+   MSG_3DS_BOTTOM_MENU_NO_STATE_DATA,
+   "Sense\nDades"
+   )
 #endif
 #ifdef HAVE_QT
 #endif

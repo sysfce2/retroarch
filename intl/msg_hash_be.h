@@ -2522,16 +2522,8 @@ MSG_HASH(
    "Цэлалікавы маштаб"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER,
-   "Маштабаваць малюнак з цэлалікім інтэрвалам. Базавы памер залежыць ад геаметрыі і суадносін бакоў сістэмы. Калі не ўключана 'Прымусовая ўстаноўка' для суадносін бакоў, значэнні X/Y будуць мяняцца незалежна адзін ад аднаго."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Павялічванне цэлалікавага маштабу"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Рабіць акругленне пры цэлалікім маштабаванні ў бок большага, а не меншага цэлага ліку."
+   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_SCALING_SMART,
+   "Разумнае"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_ASPECT_RATIO_INDEX,
@@ -4411,14 +4403,6 @@ MSG_HASH(
    "Бягучае ядро ​​несумяшчальнае з забяганнем праз адсутнасць дэтэрмінаванай падтрымкі захавання стану."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_ENABLED,
-   "Забяганне для скарачэння латэнтнасці"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_ENABLED,
-   "Апрацоўваць логіку ядра на адзін або больш кадраў наперад з наступным адкатам стану для памяншэння атрыманай затрымкі ўводу."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_FRAMES,
    "Колькасць кадраў забягання"
    )
@@ -4426,14 +4410,8 @@ MSG_HASH(
    MENU_ENUM_SUBLABEL_RUN_AHEAD_FRAMES,
    "Колькасць кадраў забягання. Выклікае нестабільнасць геймплэя пры завышэнні колькасці кадраў унутрагульнявой затрымкі."
    )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Выкарыстоўваць другасны экзэмпляр для забягання"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Выкарыстоўваць для забягання другасны экзэмпляр ядра RetroArch. Прадухіляе праблемы з гукам падчас загрузкі стану."
-   )
+#if !(defined(HAVE_DYNAMIC) || defined(HAVE_DYLIB))
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_HIDE_WARNINGS,
    "Хаваць папярэджанні забягання"
@@ -4443,36 +4421,12 @@ MSG_HASH(
    "Хаваць папярэджанні, якія паказваюцца пры выкарыстанні забягання з ядром без падтрымкі захавання станаў."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_UNSUPPORTED,
-   "[Кадры апярэджання недаступныя]"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_UNSUPPORTED,
-   "Бягучае ядро ​​несумяшчальнае з кадрамі апярэджання праз адсутнасць дэтэрмінаванай падтрымкі захавання стану."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_ENABLE,
-   "Апрацоўка кадраў апярэджання"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_ENABLE,
-   "Паўторная апрацоўка логікі ядра з апошнімі падзеямі ўводу пры змене стану кантролера. Працуе хутчэй забегання, але можа выклікаць праблемы з гукам у ядраў пры загрузцы хуткіх захаванняў."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PREEMPT_FRAMES,
    "Колькасць папярэджальных кадраў"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_PREEMPT_FRAMES,
    "Колькасць кадраў для паўторнай апрацоўкі. Выклікае няроўнасць геймплэя, калі перавышана колькасць кадраў унутрагульнявой затрымкі."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_HIDE_WARNINGS,
-   "Хаваць паведамленні аб папярэджальных кадрах"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_HIDE_WARNINGS,
-   "Не паказваць папярэджанне пры несумяшчальнасці ядра з папярэджальнымі кадрамі."
    )
 
 /* Settings > Core */

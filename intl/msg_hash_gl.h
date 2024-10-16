@@ -2486,16 +2486,8 @@ MSG_HASH(
    "Escala enteira"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER,
-   "Escala o vídeo só en pasos enteiros. O tamaño base depende da xeometría e relación de aspecto informadas polo sistema. Se non se define a \"Forzar relación de aspecto\", X/Y escalarase enteiro de forma independente."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Sobreescala de escala enteira"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Forza a escala de enteiros a redondear cara arriba ao seguinte número enteiro maior en lugar de redondear abaixo."
+   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_SCALING_SMART,
+   "Intelixente"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_ASPECT_RATIO_INDEX,
@@ -4311,14 +4303,6 @@ MSG_HASH(
    "O núcleo actual é incompatible con adiante debido á falta de soporte determinista para o estado de gardado."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_ENABLED,
-   "Run-ahead para reducir a latencia"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_ENABLED,
-   "Execute a lóxica central un ou máis fotogramas por diante e despois cargue o estado de novo para reducir o atraso de entrada percibido."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_FRAMES,
    "Número de fotogramas para correr adiante"
    )
@@ -4326,14 +4310,8 @@ MSG_HASH(
    MENU_ENUM_SUBLABEL_RUN_AHEAD_FRAMES,
    "O número de fotogramas que se van adiante. Causa problemas de xogo, como tremores, se se supera o número de fotogramas de atraso internos do xogo."
    )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Use a segunda instancia para Run-Ahead"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Use unha segunda instancia do núcleo de RetroArch para avanzar. Evita problemas de audio debido ao estado de carga."
-   )
+#if !(defined(HAVE_DYNAMIC) || defined(HAVE_DYLIB))
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_HIDE_WARNINGS,
    "Ocultar avisos de adianto"
@@ -4343,36 +4321,12 @@ MSG_HASH(
    "Oculta a mensaxe de aviso que aparece ao usar Run-Ahead e o núcleo non admite os estados de gardar."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_UNSUPPORTED,
-   "[Fotogramas preventivos non dispoñibles]"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_UNSUPPORTED,
-   "O núcleo actual é incompatible con fotogramas preventivos debido á falta de soporte determinista para o estado de gardar."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_ENABLE,
-   "Executar fotogramas preventivos"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_ENABLE,
-   "Volve executar a lóxica principal coa entrada máis recente cando o estado do controlador cambie. Máis rápido que Run-Ahead, pero non evita problemas de audio que poden ter os núcleos cos estados de carga."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PREEMPT_FRAMES,
    "Número de fotogramas preventivos"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_PREEMPT_FRAMES,
    "O número de fotogramas para volver executar. Causa problemas de xogo, como tremores, se se supera o número de fotogramas de atraso internos do xogo."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_HIDE_WARNINGS,
-   "Ocultar avisos de fotogramas preventivos"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_HIDE_WARNINGS,
-   "Oculta a mensaxe de aviso que aparece cando un núcleo é incompatible cos fotogramas preventivos."
    )
 
 /* Settings > Core */

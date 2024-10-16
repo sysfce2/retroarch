@@ -2490,16 +2490,8 @@ MSG_HASH(
    "Egész-szorzós felbontás skálázás"
    )
 MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER,
-   "A kép csak egész szorzóval történő méretezése. Az alapméret a rendszer által megadott képgeometriától és képaránytól függ. Ha a képarány nem rögzített, a vízszintes és függőleges irányokat egymástól függetlenül szorozza."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Egész-szorzós túlskálázás"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_VIDEO_SCALE_INTEGER_OVERSCALE,
-   "Lefele helyett felfele kerekítés az egész szorzóval történő méretezés során."
+   MENU_ENUM_LABEL_VALUE_VIDEO_SCALE_INTEGER_SCALING_SMART,
+   "Intelligens"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_VIDEO_ASPECT_RATIO_INDEX,
@@ -4383,14 +4375,6 @@ MSG_HASH(
    "A jelenlegi mag nem kompatibilis a run-ahead funkcióval a determinisztikus játékállás mentés hiánya miatt."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_ENABLED,
-   "Run-ahead használata"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_ENABLED,
-   "A mag továbbfuttatása egy vagy több képkockával, majd az állás visszatöltése, az érzékelt bemeneti késleltetés csökkentése érdekében."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_FRAMES,
    "Run-ahead képkockák száma"
    )
@@ -4398,14 +4382,8 @@ MSG_HASH(
    MENU_ENUM_SUBLABEL_RUN_AHEAD_FRAMES,
    "Az előre generált képkockák száma. Ha nagyobb, mint a játék belső késleltetése, gondot okozhat a játékmenetben, például rángatást."
    )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Második példány a run-ahead funkcióhoz"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_RUN_AHEAD_SECONDARY_INSTANCE,
-   "Egy második RetroArch mag futtatása a run-ahead funkcióhoz. Megelőzi az állásbetöltés miatt fellépő hangproblémákat."
-   )
+#if !(defined(HAVE_DYNAMIC) || defined(HAVE_DYLIB))
+#endif
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_RUN_AHEAD_HIDE_WARNINGS,
    "Run-ahead figyelmeztetések elrejtése"
@@ -4415,36 +4393,12 @@ MSG_HASH(
    "A figyelmeztető üzenet elrejtése, ami akkor jelenik meg, ha a run-ahead-et azt nem támogató magnál próbálják bekapcsolni."
    )
 MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_UNSUPPORTED,
-   "[Az előre generált képkockák nem elérhetőek]"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_UNSUPPORTED,
-   "A jelenlegi mag nem kompatibilis az előre generált képkockák funkcióval, a determinisztikus játékállás mentés hiánya miatt."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_ENABLE,
-   "Előre generált képkockák futtatása"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_ENABLE,
-   "A mag logikájának újrafuttatása az utolsó bemeneti állapottal, amikor a kontroller állapota megváltozik. Gyorsabb a Run-Ahead-nél, de nem gátolja meg a hangproblémákat, amelyek néhány magnál állásbetöltéskor jelentkeznek."
-   )
-MSG_HASH(
    MENU_ENUM_LABEL_VALUE_PREEMPT_FRAMES,
    "Előre generált képkockák száma"
    )
 MSG_HASH(
    MENU_ENUM_SUBLABEL_PREEMPT_FRAMES,
    "Az újrafuttatott képkockák száma. Ha nagyobb, mint a játék belső késleltetése, gondot okozhat a játékmenetben, például rángatást."
-   )
-MSG_HASH(
-   MENU_ENUM_LABEL_VALUE_PREEMPT_HIDE_WARNINGS,
-   "Az előre generált képkockák figyelmeztetéseinek elrejtése"
-   )
-MSG_HASH(
-   MENU_ENUM_SUBLABEL_PREEMPT_HIDE_WARNINGS,
-   "A figyelmeztetés elrejtése, amely akkor jelenik meg, ha a mag nem kompatibilis az előre generált képkockák funkcióval."
    )
 
 /* Settings > Core */
